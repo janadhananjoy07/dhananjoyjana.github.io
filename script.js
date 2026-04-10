@@ -236,12 +236,12 @@ if (!subject) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
 
-   emailjs.sendForm(
-  'service_6uc5rjl',
-  'template_svxagfd',
-  contactForm,
-  '5LlSpQOLbRgozUIoa'
-)
+   emailjs.send('service_6uc5rjl', 'template_svxagfd', {
+  from_name: name,
+  from_email: email,
+  subject: subject,
+  message: message
+}, '5LlSpQOLbRgozUIoa')
 .then(() => {
   formSuccess.classList.add('show');
   contactForm.reset();
