@@ -1412,14 +1412,18 @@ img { max-width: 100%; }
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .certificate-image {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   display: block;
   transition: transform var(--transition);
+  background: var(--bg-secondary);
+  padding: 1rem;
 }
 
 .certificate-overlay {
@@ -1431,6 +1435,15 @@ img { max-width: 100%; }
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition);
+}
+
+.certificate-meta {
+  padding: 1rem;
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .certificate-card:hover {
@@ -1801,6 +1814,27 @@ a.contact-link:hover {
   color: var(--text-muted);
 }
 
+.footer-credits {
+  font-family: var(--font-sans), "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: inline-block;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.02em;
+}
+
+.flag-emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI", sans-serif;
+  font-size: 1.1em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+
 /* ===================== BACK TO TOP =================== */
 .back-to-top {
   position: fixed;
@@ -1905,7 +1939,7 @@ a.contact-link:hover {
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; justify-content: center; }
   .ai-hero-banner { flex-direction: column; text-align: center; }
-  .journey-roadmap { flex-direction: column; align-items: flex-start; padding: 1rem; }
+  .journey-roadmap { flex-direction: column; align-items: flex-start; padding: 2rem 1.5rem; gap: 2rem; }
   .journey-connector { width: 2px; height: 40px; min-width: unset; }
-  .journey-step { flex-direction: row; width: auto; text-align: left; gap: 1.25rem; }
+  .journey-step { flex-direction: row; width: auto; text-align: left; gap: 1.25rem; padding: 1rem 0; }
 }
