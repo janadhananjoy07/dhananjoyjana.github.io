@@ -217,37 +217,43 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('contact-name').value.trim();
-    const email = document.getElementById('contact-email-input').value.trim();
-    const message = document.getElementById('contact-message').value.trim();
+const name = document.getElementById('contact-name').value.trim();
+const email = document.getElementById('contact-email-input').value.trim();
+let subject = document.getElementById('contact-subject').value.trim();
+const message = document.getElementById('contact-message').value.trim();
 
-    if (!name || !email || !message) {
-      shakeForm();
-      return;
-    }
+if (!name || !email || !message) {
+  shakeForm();
+  return;
+}
+
+// fallback subject
+if (!subject) {
+  subject = "No Subject";
+  document.getElementById('contact-subject').value = subject;
+}
 
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
 
-    emailjs.send('service_6uc5rjl', 'template_svxagfd', {
-      from_name: name,
-      from_email: email,
-      subject: document.getElementById('contact-subject').value.trim(),
-      message: message,
-      reply_to: email,
-    })
-    .then(() => {
-      formSuccess.classList.add('show');
-      contactForm.reset();
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      submitBtn.disabled = false;
-      setTimeout(() => formSuccess.classList.remove('show'), 5000);
-    })
-    .catch(() => {
-      submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-      submitBtn.disabled = false;
-      alert('Oops! Something went wrong. Please try again or email directly at jdhananjoy2@gmial.com.');
-    });
+   emailjs.sendForm(
+  'service_6uc5rjl',
+  'template_svxagfd',
+  contactForm,
+  '5LlSpQOLbRgozUIoa'
+)
+.then(() => {
+  formSuccess.classList.add('show');
+  contactForm.reset();
+  submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+  submitBtn.disabled = false;
+  setTimeout(() => formSuccess.classList.remove('show'), 5000);
+})
+.catch(() => {
+  submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+  submitBtn.disabled = false;
+  alert('Oops! Something went wrong.');
+});
   });
 }
 
