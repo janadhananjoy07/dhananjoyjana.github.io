@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Dhananjoy Jana – Aspiring DevOps Engineer and software developer from Kolkata, India. Skilled in Linux, cloud computing, automation, and backend development." />
+  <meta name="keywords"
+    content="Dhananjoy Jana, DevOps Engineer, Portfolio, Linux, Shell Scripting, Docker, Kubernetes, Git, Python" />
+  <meta name="author" content="Dhananjoy Jana" />
+  <meta property="og:title" content="Dhananjoy Jana | DevOps Engineer Portfolio" />
+  <meta property="og:description" content="Building skills today for scalable systems tomorrow." />
+  <title>Dhananjoy Jana | DevOps Engineer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ======================== LOADER ======================== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <span class="loader-text">DJ</span>
+    </div>
+  </div>
+
+  <!-- ======================== CURSOR ======================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>DJ<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#ai-experience" class="nav-link" data-section="ai-experience">AI Tools</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="floating-particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Open to Opportunities</span>
+      </div>
+      <h1 class="hero-name">
+        Hi, I'm <span class="gradient-text">Dhananjoy Jana</span>
+      </h1>
+      <div class="hero-title">
+        <span class="static-text">Aspiring </span>
+        <span class="typed-text" id="typed-text"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-tagline">"Building skills today for scalable systems tomorrow."</p>
+      <p class="hero-description">
+        A passionate developer from <span class="highlight">Kolkata, India</span> with a strong focus on
+        <span class="highlight">DevOps</span>, <span class="highlight">Linux</span>, and
+        <span class="highlight">Cloud Computing</span>. Fast learner. AI-powered productivity.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">10+</span>
+          <span class="stat-label">Skills</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Competition</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span class="terminal-btn red"></span>
+          <span class="terminal-btn yellow"></span>
+          <span class="terminal-btn green"></span>
+          <span class="terminal-title">dhananjoy@devops:~</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd"> whoami</span>
+          </div>
+          <div class="terminal-output">dhananjoy_jana</div>
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd"> cat role.txt</span>
+          </div>
+          <div class="terminal-output">Aspiring DevOps Engineer</div>
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd"> ls skills/</span>
+          </div>
+          <div class="terminal-output terminal-skill">
+            linux/&nbsp;&nbsp;docker/&nbsp;&nbsp;git/<br />
+            python/&nbsp;&nbsp;shell/&nbsp;&nbsp;ci-cd/
+          </div>
+          <div class="terminal-line">
+            <span class="prompt">$</span>
+            <span class="cmd"> echo $STATUS</span>
+          </div>
+          <div class="terminal-output terminal-green">Actively Learning &amp; Building 🚀</div>
+          <div class="terminal-line blink-line">
+            <span class="prompt">$</span>
+            <span class="cmd"> █</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ======================== ABOUT ======================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// about_me.md</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar-wrap reveal">
+          <div class="avatar-container">
+            <div class="avatar-ring"></div>
+            <img class="avatar-photo" src="assest/portfolio_enhanced.jpg" alt="Photo of Dhananjoy Jana" loading="lazy" />
+            <div class="avatar-online"></div>
+          </div>
+          <div class="about-meta">
+            <div class="meta-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kolkata, India</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>BCA-MAWT Student</span>
+            </div>
+            <div class="meta-item">
+              <i class="fas fa-briefcase"></i>
+              <span>Open to Work</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <p class="about-paragraph">
+            I am an aspiring <strong>DevOps Engineer</strong> and software developer with a strong interest in
+            <strong>Linux, cloud computing, automation</strong>, and backend development. Currently pursuing my
+            BCA-MAWT at Brainware University, I actively participate in coding competitions and continuously
+            improve my problem-solving skills.
+          </p>
+          <p class="about-paragraph">
+            I leverage <strong>AI tools</strong> to enhance my learning, debug code, and build projects more
+            efficiently — boosting my productivity and accelerating my growth as a developer. My goal is to become
+            industry-ready with strong practical DevOps skills.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-chip"><i class="fas fa-bolt"></i> Fast Learner</div>
+            <div class="highlight-chip"><i class="fas fa-robot"></i> AI-Powered</div>
+            <div class="highlight-chip"><i class="fas fa-terminal"></i> Linux Enthusiast</div>
+            <div class="highlight-chip"><i class="fas fa-cloud"></i> Cloud Curious</div>
+          </div>
+          <a href="#contact" class="btn btn-primary mt-2">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SKILLS ======================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// skills.json</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+      <div class="skills-grid">
+
+        <!-- Programming -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap blue">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Dart</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag basic">Java</span>
+          </div>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap purple">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag basic">JavaScript (Basic)</span>
+            <span class="skill-tag">PHP</span>
+          </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="skill-card reveal highlight-card">
+          <div class="skill-card-badge">Core Focus</div>
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap cyan">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3>DevOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag strong">Linux</span>
+            <span class="skill-tag strong">Shell Scripting</span>
+            <span class="skill-tag strong">Git</span>
+            <span class="skill-tag strong">GitHub</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap green">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">CMD</span>
+            <span class="skill-tag">Git Bash</span>
+            <span class="skill-tag">Android Studio</span>
+            <span class="skill-tag">XAMPP</span>
+            <span class="skill-tag">Antigravity</span>
+          </div>
+        </div>
+
+        <!-- AI Tools -->
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap orange">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">Gemini</span>
+            <span class="skill-tag">NotebookLLM</span>
+            <span class="skill-tag">GitHub Copilot</span>
+            <span class="skill-tag">AI Coding Assistants</span>
+          </div>
+        </div>
+
+        <!-- Learning -->
+        <div class="skill-card reveal learning-card">
+          <div class="skill-card-badge learning">Learning</div>
+          <div class="skill-card-header">
+            <div class="skill-icon-wrap pink">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Currently Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag learning-tag">Docker</span>
+            <span class="skill-tag learning-tag">CI/CD</span>
+            <span class="skill-tag learning-tag">Kubernetes</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PROJECTS ======================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// projects.sh</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Things I've built and worked on</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card reveal" id="proj-social">
+          <div class="project-top">
+            <div class="project-icon-wrap">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Social Media Web App</h3>
+          <p class="project-desc">A social media platform with user authentication and core social features built using
+            PHP and MySQL.</p>
+          <ul class="project-points">
+            <li><i class="fas fa-check-circle"></i> User authentication system</li>
+            <li><i class="fas fa-check-circle"></i> Basic social features</li>
+            <li><i class="fas fa-check-circle"></i> MySQL database backend</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">PHP</span>
+            <span class="stack-badge">MySQL</span>
+            <span class="stack-badge">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal" id="proj-linux">
+          <div class="project-top">
+            <div class="project-icon-wrap green-icon">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Linux Automation Scripts</h3>
+          <p class="project-desc">A collection of shell scripts for Linux command practice and task automation,
+            improving operational efficiency.</p>
+          <ul class="project-points">
+            <li><i class="fas fa-check-circle"></i> Task automation scripts</li>
+            <li><i class="fas fa-check-circle"></i> Linux command mastery</li>
+            <li><i class="fas fa-check-circle"></i> Bash scripting practice</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">Bash</span>
+            <span class="stack-badge">Linux</span>
+            <span class="stack-badge">Shell</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal" id="proj-flutter">
+          <div class="project-top">
+            <div class="project-icon-wrap blue-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Flutter Web App</h3>
+          <p class="project-desc">A simple yet responsive web application built with Flutter, demonstrating
+            cross-platform UI development skills.</p>
+          <ul class="project-points">
+            <li><i class="fas fa-check-circle"></i> Responsive UI design</li>
+            <li><i class="fas fa-check-circle"></i> Flutter/Dart implementation</li>
+            <li><i class="fas fa-check-circle"></i> Cross-platform ready</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">Flutter</span>
+            <span class="stack-badge">Dart</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal featured-project" id="proj-devops">
+          <div class="featured-badge">Featured</div>
+          <div class="project-top">
+            <div class="project-icon-wrap cyan-icon">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link" aria-label="View Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">DevOps Practice Projects</h3>
+          <p class="project-desc">Hands-on DevOps implementation with CI/CD pipeline setup and Git workflow automation
+            following industry best practices.</p>
+          <ul class="project-points">
+            <li><i class="fas fa-check-circle"></i> Basic CI/CD pipeline setup</li>
+            <li><i class="fas fa-check-circle"></i> Git workflow automation</li>
+            <li><i class="fas fa-check-circle"></i> Version control best practices</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-badge">Git</span>
+            <span class="stack-badge">CI/CD</span>
+            <span class="stack-badge">GitHub Actions</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== AI EXPERIENCE ======================== -->
+  <section class="section ai-section" id="ai-experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// ai_tools.py</span>
+        <h2 class="section-title">AI-Powered <span class="gradient-text">Productivity</span></h2>
+        <p class="section-subtitle">How I leverage AI to learn faster and build smarter</p>
+      </div>
+      <div class="ai-hero-banner reveal">
+        <div class="ai-banner-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="ai-banner-content">
+          <h3>AI as a Force Multiplier</h3>
+          <p>I don't just use AI — I integrate it into my workflow to learn 10x faster, debug smarter, and build more
+            ambitious projects.</p>
+        </div>
+        <div class="ai-banner-glow"></div>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card reveal" id="ai-debug">
+          <div class="ai-card-icon">
+            <i class="fas fa-bug"></i>
+          </div>
+          <h3>Debug Faster</h3>
+          <p>Used AI tools to identify and fix bugs rapidly, reducing debugging time significantly and understanding
+            root causes better.</p>
+          <div class="ai-card-shine"></div>
+        </div>
+        <div class="ai-card reveal" id="ai-ideas">
+          <div class="ai-card-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Project Ideas</h3>
+          <p>Generated creative project ideas and improved implementation strategies using AI, leading to more impactful
+            and well-structured code.</p>
+          <div class="ai-card-shine"></div>
+        </div>
+        <div class="ai-card reveal" id="ai-learn">
+          <div class="ai-card-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Accelerated Learning</h3>
+          <p>Learned DevOps tools, scripting, and programming concepts faster with AI-guided explanations and real-time
+            feedback.</p>
+          <div class="ai-card-shine"></div>
+        </div>
+        <div class="ai-card reveal" id="ai-productivity">
+          <div class="ai-card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Productivity Boost</h3>
+          <p>Improved overall development speed and code quality by integrating AI coding assistants into my daily
+            workflow.</p>
+          <div class="ai-card-shine"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== EDUCATION ======================== -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// education.log</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+      </div>
+      <div class="education-timeline">
+        <div class="timeline-item reveal" id="edu-bca">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-degree">Bachelor of Computer Applications (BCA)</h3>
+                <p class="timeline-institution">Brainware University, Kolkata</p>
+              </div>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-desc">
+              Pursuing a comprehensive BCA program with focus on computer science fundamentals
+              and software development.
+            </p>
+            <div class="timeline-courses">
+              <span class="course-tag"><i class="fas fa-code"></i> Programming</span>
+              <span class="course-tag"><i class="fas fa-globe"></i> Web Development</span>
+              <span class="course-tag"><i class="fas fa-database"></i> Data Structures</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal" id="edu-self">
+          <div class="timeline-dot">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-degree">Self-Directed Learning</h3>
+                <p class="timeline-institution">Online platforms & AI-assisted learning</p>
+              </div>
+              <span class="timeline-badge ongoing">Ongoing</span>
+            </div>
+            <p class="timeline-desc">
+              Continuously learning DevOps practices, cloud tools, and automation systems
+              through hands-on projects and AI-assisted mentorship.
+            </p>
+            <div class="timeline-courses">
+              <span class="course-tag"><i class="fas fa-server"></i> DevOps</span>
+              <span class="course-tag"><i class="fab fa-docker"></i> Docker</span>
+              <span class="course-tag"><i class="fas fa-cloud"></i> Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ACHIEVEMENTS ======================== -->
+  <section class="section achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// achievements.yml</span>
+        <h2 class="section-title">My <span class="gradient-text">Achievements</span></h2>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal" id="ach-battleground">
+          <div class="achievement-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="achievement-content">
+            <h3>Battleground Coding Competition</h3>
+            <p class="achievement-org">MAWT Event</p>
+            <p class="achievement-desc">
+              Participated in the "Battleground Coding Competition" organized by MAWT,
+              showcasing problem-solving skills and competitive programming abilities.
+            </p>
+          </div>
+          <div class="achievement-glow"></div>
+        </div>
+        <div class="achievement-card reveal" id="ach-coding">
+          <div class="achievement-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="achievement-content">
+            <h3>Consistent Skill Building</h3>
+            <p class="achievement-org">Self-Development</p>
+            <p class="achievement-desc">
+              Actively improving coding and problem-solving skills through daily practice,
+              project building, and competitive programming challenges.
+            </p>
+          </div>
+          <div class="achievement-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CERTIFICATIONS ======================== -->
+  <section class="section certifications-section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// certificates.pdf</span>
+        <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+        <p class="section-subtitle">Professional credentials and completed courses</p>
+      </div>
+      <div class="certifications-grid">
+        <div class="certificate-card reveal">
+          <img src="assest/certificate/AWS%20Training%20%26%20Certification_page-0001.jpg" alt="AWS Training & Certification" class="certificate-image" />
+          <div class="certificate-overlay">
+            <a href="assest/certificate/AWS%20Training%20%26%20Certification_page-0001.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-expand"></i> View Certificate
+            </a>
+          </div>
+        </div>
+        <div class="certificate-card reveal">
+          <img src="assest/certificate/Introduction%20to%20Containers_page-0001.jpg" alt="Introduction to Containers" class="certificate-image" />
+          <div class="certificate-overlay">
+            <a href="assest/certificate/Introduction%20to%20Containers_page-0001.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-expand"></i> View Certificate
+            </a>
+          </div>
+        </div>
+        <div class="certificate-card reveal">
+          <img src="assest/certificate/Introduction%20to%20Serverless_page-0001.jpg" alt="Introduction to Serverless" class="certificate-image" />
+          <div class="certificate-overlay">
+            <a href="assest/certificate/Introduction%20to%20Serverless_page-0001.jpg" target="_blank" class="certificate-link">
+              <i class="fas fa-expand"></i> View Certificate
+            </a>
+          </div>
+        </div>        cd D:\ClassNote\dhananjoy\ portfollio\dhananjoy\ portfollio
+        python -m http.server 8000
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== LEARNING JOURNEY ======================== -->
+  <section class="section journey-section" id="learning-journey">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// roadmap.json</span>
+        <h2 class="section-title">Learning <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">My DevOps roadmap and progression</p>
+      </div>
+      <div class="journey-roadmap reveal">
+        <div class="journey-step completed" id="step-linux">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="step-content">
+            <h4>Linux Fundamentals</h4>
+            <p>Command line mastery, file system, permissions</p>
+          </div>
+        </div>
+        <div class="journey-connector completed"></div>
+        <div class="journey-step completed" id="step-git">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="step-content">
+            <h4>Git & Version Control</h4>
+            <p>Git workflows, branching, GitHub collaboration</p>
+          </div>
+        </div>
+        <div class="journey-connector completed"></div>
+        <div class="journey-step completed" id="step-scripting">
+          <div class="step-circle">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="step-content">
+            <h4>Shell Scripting</h4>
+            <p>Automation scripts and task scheduling</p>
+          </div>
+        </div>
+        <div class="journey-connector active"></div>
+        <div class="journey-step active" id="step-docker">
+          <div class="step-circle pulse-step">
+            <i class="fab fa-docker"></i>
+          </div>
+          <div class="step-content">
+            <h4>Docker & Containers</h4>
+            <p>Containerization and image management</p>
+          </div>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-step upcoming" id="step-cicd">
+          <div class="step-circle">
+            <i class="fas fa-infinity"></i>
+          </div>
+          <div class="step-content">
+            <h4>CI/CD Pipelines</h4>
+            <p>Automated build, test & deploy workflows</p>
+          </div>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-step upcoming" id="step-k8s">
+          <div class="step-circle">
+            <i class="fas fa-dharmachakra"></i>
+          </div>
+          <div class="step-content">
+            <h4>Kubernetes</h4>
+            <p>Container orchestration at scale</p>
+          </div>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-step upcoming" id="step-cloud">
+          <div class="step-circle">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <div class="step-content">
+            <h4>Cloud Platforms</h4>
+            <p>AWS / GCP / Azure cloud infrastructure</p>
+          </div>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-step upcoming" id="step-ml">
+          <div class="step-circle">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="step-content">
+            <h4>ML Learning</h4>
+            <p>Machine learning algorithms and data science</p>
+          </div>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-step upcoming" id="step-iot">
+          <div class="step-circle">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div class="step-content">
+            <h4>IOT Base Project</h4>
+            <p>Internet of Things projects and embedded systems</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// contact.sh</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Open to collaborations, internships, and opportunities</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's Work Together</h3>
+          <p>
+            I'm actively looking for internships, collaborative projects, and learning opportunities
+            in the DevOps and software development space. Don't hesitate to reach out!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:jdhananjoy2@gmial.com" class="contact-link" id="contact-email">
+              <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-link-text">
+                <span class="link-label">Email</span>
+                <span class="link-value">jdhananjoy2@gmial.com</span>
+              </div>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-link" id="contact-github">
+              <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+              <div class="contact-link-text">
+                <span class="link-label">GitHub</span>
+                <span class="link-value">github.com/janadhananjoy07</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-link" id="contact-linkedin">
+              <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+              <div class="contact-link-text">
+                <span class="link-label">LinkedIn</span>
+                <span class="link-value">linkedin.com/in/dhananjoy-jana-50345724a</span>
+              </div>
+            </a>
+            <div class="contact-link" id="contact-location">
+              <div class="contact-link-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-link-text">
+                <span class="link-label">Location</span>
+                <span class="link-value">Kolkata, West Bengal, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Radha Radha" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email-input">Email Address</label>
+              <input type="email" id="contact-email-input" name="email" placeholder="ram@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Topic" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your Query..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full" id="contact-submit">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>DJ<span class="logo-slash">/</span><span
+            class="logo-bracket">&gt;</span>
+        </a>
+        <p class="footer-tagline">"Building skills today for scalable systems tomorrow."</p>
+        <div class="footer-socials">
+          <a href="https://github.com/janadhananjoy07" target="_blank" class="social-icon" aria-label="GitHub"
+            id="footer-github-link"><i class="fab fa-github"></i></a>
+          <a href="https://facebook.com/dhananjoy.jana.07" target="_blank" class="social-icon" aria-label="Facebook"
+            id="footer-facebook-link"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com/dhananjoy.jana.07" target="_blank" class="social-icon" aria-label="Instagram"
+            id="footer-instagram-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/in/dhananjoy-jana-50345724a" target="_blank" class="social-icon" aria-label="LinkedIn"
+            id="footer-linkedin-link"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:jdhananjoy2@gmial.com" class="social-icon" aria-label="Email" id="footer-email-link"><i
+              class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dhananjoy Jana. Built with <i class="fas fa-heart" style="color:#ff6b6b"></i> and lots of <i
+            class="fas fa-coffee" style="color:#f093fb"></i></p>
+        <p class="footer-credits">Kolkata, India 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
